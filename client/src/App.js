@@ -5,6 +5,7 @@ import NavBar from './components/Nav'
 import Feed from './pages/Feed'
 import Login from './pages/Login'
 import Register from './pages/Register'
+import About from './pages/About'
 import { CheckSession } from './services/Auth'
 
 const App = () => {
