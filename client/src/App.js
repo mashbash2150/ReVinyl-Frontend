@@ -40,6 +40,20 @@ const App = () => {
       <main>
         <Routes>
           <Route path="/" element={<Feed />} />
+          <Route
+            path="/login"
+            element={
+              <Login
+                setUser={setUser}
+                toggleAuthenticated={toggleAuthenticated}
+              />
+            }
+          />
+          <Route path="/register" element={<Register />} />
+          <Route
+            path="/library"
+            element={<library user={user} authenticated={authenticated} />}
+          />
         </Routes>
       </main>
       <header className="App-header">
