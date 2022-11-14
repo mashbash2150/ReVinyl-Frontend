@@ -6,6 +6,7 @@ import Feed from './pages/Feed'
 import Login from './pages/Login'
 import Register from './pages/Register'
 import About from './pages/About'
+import Library from './pages/Library'
 import { CheckSession } from './services/Auth'
 
 const App = () => {
@@ -53,8 +54,9 @@ const App = () => {
           <Route path="/register" element={<Register />} />
           <Route
             path="/library"
-            element={<library user={user} authenticated={authenticated} />}
+            element={<Library user={user} authenticated={authenticated} />}
           />
+          <Route path="/about" element={<About />} />
         </Routes>
       </main>
       <header className="App-header">

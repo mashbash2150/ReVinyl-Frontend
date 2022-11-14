@@ -16,6 +16,7 @@ const NavBar = ({ authenticated, user, handleLogOut }) => {
         <div>
             <NavLink to='/about' className='nav-link about'>About</NavLink>
             <NavLink to='/login' className='nav-link login'>Login</NavLink>
+            <NavLink to='/register' className='nav-link register'>Register</NavLink>
         </div>
     );
 
