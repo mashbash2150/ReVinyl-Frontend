@@ -54,7 +54,7 @@ const App = () => {
       />
       <main>
         <Routes>
-          <Route path="/feed" element={<Feed vinylList={vinylList} />} />
+          <Route path="/" element={<Feed user={user} authenticated={authenticated} vinylList={vinylList} />} />
           <Route
             path="/login"
             element={
