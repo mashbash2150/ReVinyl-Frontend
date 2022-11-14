@@ -34,7 +34,7 @@ const NavBar = ({ authenticated, user, handleLogOut }) => {
             </NavLink>
             <h1 className='username-display'>Welcome{user && ` ${user.username}`}!</h1>
             <div className='nav-links'>
-                <NavLink to='/' className='nav-link home'>Home</NavLink>
+                <NavLink to='/' className='nav-link home'>Feed</NavLink>
                 {authenticated && user ? userOptions : globalOptions}
             </div>
         </nav>

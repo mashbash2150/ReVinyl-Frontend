@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { LoginUser } from '../services/Auth'
-import { Link } from 'react-router-dom'
 
 const Login = ({ toggleAuthenticated, setUser }) => {
   const navigate = useNavigate()
