@@ -1,5 +1,6 @@
 import './App.css'
 import { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { Route, Routes } from 'react-router'
 import NavBar from './components/Nav'
 import Feed from './pages/Feed'
@@ -10,17 +11,24 @@ import Library from './pages/Library'
 import { CheckSession } from './services/Auth'
 import axios from 'axios'
 import { BASE_URL } from './globals'
+import VinylDetails from './pages/VinylDetails'
+
+
 
 const App = () => {
   const [authenticated, toggleAuthenticated] = useState(false)
   const [user, setUser] = useState(null)
   const [vinylList, setVinylList] = useState([])
+  const navigate = useNavigate()
+  const [selectedVinyl, setSelectedVinyl] = useState([])
 
   const getFeed = async () => {
     const res = await axios.get(`${BASE_URL}/feed`)
     console.log(res.data)
     setVinylList(res.data)
   }
+
+
 
   const handleLogOut = () => {
     setUser(null)
@@ -67,9 +75,10 @@ const App = () => {
           <Route path="/register" element={<Register />} />
           <Route
             path="/library"
-            element={<Library user={user} authenticated={authenticated} />}
+            element={<Library user={user} authenticated={authenticated}  />}
           />
           <Route path="/about" element={<About />} />
+          <Route path='/feed/:vinyl_id' element={<VinylDetails />} />
         </Routes>
       </main>
       <header className="App-header">
