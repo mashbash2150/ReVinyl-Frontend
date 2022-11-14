@@ -23,7 +23,7 @@ const NavBar = ({ authenticated, user, handleLogOut }) => {
 
     return (
         <nav>
-            <NavLink to='/' className='nav-logo-link'>
+            <NavLink to='/feed' className='nav-logo-link'>
                 <div className='logo-wrapper' alt='logo'>
                     <img
                     className='logo'
@@ -35,7 +35,7 @@ const NavBar = ({ authenticated, user, handleLogOut }) => {
             </NavLink>
             <h1 className='username-display'>Welcome{user && ` ${user.username}`}!</h1>
             <div className='nav-links'>
-                <NavLink to='/' className='nav-link home'>Feed</NavLink>
+                <NavLink to='/feed' className='nav-link home'>Feed</NavLink>
                 {authenticated && user ? userOptions : globalOptions}
             </div>
         </nav>

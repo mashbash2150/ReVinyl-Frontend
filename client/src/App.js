@@ -8,10 +8,19 @@ import Register from './pages/Register'
 import About from './pages/About'
 import Library from './pages/Library'
 import { CheckSession } from './services/Auth'
+import axios from 'axios'
+import { BASE_URL } from './globals'
 
 const App = () => {
   const [authenticated, toggleAuthenticated] = useState(false)
   const [user, setUser] = useState(null)
+  const [vinylList, setVinylList] = useState([])
+
+  const getFeed = async () => {
+    const res = await axios.get(`${BASE_URL}/feed`)
+    console.log(res.data)
+    setVinylList(res.data)
+  }
 
   const handleLogOut = () => {
     setUser(null)
@@ -24,6 +33,10 @@ const App = () => {
     setUser(user)
     toggleAuthenticated(true)
   }
+
+  useEffect(() => {
+    getFeed()
+  }, [])
 
   useEffect(() => {
     const token = localStorage.getItem('token')
@@ -41,7 +54,7 @@ const App = () => {
       />
       <main>
         <Routes>
-          <Route path="/" element={<Feed />} />
+          <Route path="/feed" element={<Feed vinylList={vinylList} />} />
           <Route
             path="/login"
             element={
