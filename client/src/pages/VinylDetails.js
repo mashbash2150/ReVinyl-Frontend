@@ -31,6 +31,7 @@ GetVinylDetails()
                       <img src={vinylDetails.image} alt="vinyl" />
                   </div>
               </div>
+            <button>Add to Cart placeholder button</button>
           </div>
       </>
   )
