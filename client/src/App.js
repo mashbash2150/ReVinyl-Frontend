@@ -13,8 +13,6 @@ import axios from 'axios'
 import { BASE_URL } from './globals'
 import VinylDetails from './pages/VinylDetails'
 
-
-
 const App = () => {
   const [authenticated, toggleAuthenticated] = useState(false)
   const [user, setUser] = useState(null)
@@ -28,7 +26,47 @@ const App = () => {
     setVinylList(res.data)
   }
 
+  // const initialCommentState = {
+  // body: '',
+  // vinylId: '',
+  // userId: ''
+  // }
 
+  // const [commentFromState, setCommentFormState] = useState(initialReviewState)
+
+  // const handleCommentChange = (e) => {
+  // setCommentFormState({
+  // ...commentFromState,
+  // [evt.target.id]: evt.target.value,
+  // vinyl_id: selectedVinyl.id,
+  // user_id: user.id
+  // })
+  // }
+
+  // const handleCommentSubmit = async (e) => {
+  //   evt.preventDefault()
+  //   if (editing) {
+  //     await UpdateComment(commentFromState)
+  //     setCommentFormState(initialCommentState)
+  //     let modifiedVinyl = selectedVinyl
+  //     navigate('/')
+  //  } else {
+  // await CreateComment({
+  //   body: commentFromState.body,
+  //   vinylId: selectedVinyl.id,
+  //   userId: user.id
+  // })
+  // let modifiedVinyl = selectedVinyl
+  // modifiedVinyl.vinyl_comment.push(commentFromState)
+  // navigate('/')
+  // }
+
+  // const editComment = (comment, index) => {
+  // setEditing(true)
+  // setComment(comment)
+  // setCommentFormState(comment)
+  // navigate('/comments/edit', {st})
+  // }
 
   const handleLogOut = () => {
     setUser(null)
@@ -62,7 +100,16 @@ const App = () => {
       />
       <main>
         <Routes>
-          <Route path="/" element={<Feed user={user} authenticated={authenticated} vinylList={vinylList} />} />
+          <Route
+            path="/"
+            element={
+              <Feed
+                user={user}
+                authenticated={authenticated}
+                vinylList={vinylList}
+              />
+            }
+          />
           <Route
             path="/login"
             element={
@@ -74,11 +121,11 @@ const App = () => {
           />
           <Route path="/register" element={<Register />} />
           <Route
-            path='/library/:user_id'
-            element={<Library user={user} authenticated={authenticated}  />}
+            path="/library/:user_id"
+            element={<Library user={user} authenticated={authenticated} />}
           />
           <Route path="/about" element={<About />} />
-          <Route path='/feed/:vinyl_id' element={<VinylDetails />} />
+          <Route path="/:vinyl_id" element={<VinylDetails user={user} />} />
         </Routes>
       </main>
       <header className="App-header">
