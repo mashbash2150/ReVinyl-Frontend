@@ -35,7 +35,7 @@ export const Library = () => {
         <div className="card" key={record.id}>
           <h2>Title: {record.title}</h2>
           <h3>Artist: {record.artist}</h3>
-          <p>Genre: {record.genre}</p>
+          <h3>Genre: {record.genre}</h3>
           <div>
             <div className="vinyl-card" key={record.id}>
               <img src={record.image} alt="vinyl" />

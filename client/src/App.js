@@ -12,6 +12,8 @@ import axios from 'axios'
 import { BASE_URL } from './globals'
 import VinylDetails from './pages/VinylDetails'
 import CreateListings from './pages/CreateListings'
+import UpdateListing from './pages/UpdateListing'
+import MyListings from './pages/MyListings'
 
 const App = () => {
   const [authenticated, toggleAuthenticated] = useState(false)
@@ -82,7 +84,15 @@ const App = () => {
           />
           <Route path="/about" element={<About />} />
           <Route path="/:vinyl_id" element={<VinylDetails user={user} />} />
-          <Route path="/listings" element={<CreateListings user={user} />} />
+          <Route path="/listings" element={<MyListings user={user} />} />
+          <Route
+            path="/listings/update/:vinyl_id"
+            element={<UpdateListing user={user} />}
+          />
+          <Route
+            path="/listings/create"
+            element={<CreateListings user={user} />}
+          />
         </Routes>
       </main>
       <header className="App-header">

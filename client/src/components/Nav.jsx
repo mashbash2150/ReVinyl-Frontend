@@ -8,7 +8,7 @@ const NavBar = ({ authenticated, user, handleLogOut }) => {
                 <NavLink to={`/library/${user.id}`} className='nav-link library'>User Library</NavLink>
                 <NavLink to='/about' className='nav-link about'>About</NavLink>
                 <NavLink onClick={handleLogOut} to='/' className='nav-link logout'>Log Out</NavLink>
-                <NavLink to='/listings' className='nav-link listings'>Create Listing</NavLink>
+                <NavLink to='/listings' className='nav-link listings'>My Listings</NavLink>
             </div>
         );
     }

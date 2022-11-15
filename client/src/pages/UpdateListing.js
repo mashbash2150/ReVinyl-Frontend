@@ -1,22 +1,27 @@
 import axios from 'axios'
 import { useEffect, useState } from 'react'
 import { BASE_URL } from '../globals'
+import { useParams } from 'react-router-dom'
 
 const UpdateListing = ({ user }) => {
+  let { vinyl_id } = useParams()
+  const [formState, setFormState] = useState()
+  const [vinylDetails, setVinylDetails] = useState([])
+
   const UpdateVinylDetails = async () => {
-    const res = await axios.update(`${BASE_URL}/feed/${vinyl_id}`)
-    console.log('VinylDetails:', res.data)
+    const res = await axios.get(`${BASE_URL}/feed/${vinyl_id}`)
+    console.log('VinylDetails:', res)
     setVinylDetails(res.data)
-    const initialFormState = {
+    setFormState({
       title: res.data.title,
       artist: res.data.artist,
       genre: res.data.genre,
-      price: res.data.title,
+      price: res.data.price,
       description: res.data.description,
       status: res.data.status,
       image: res.data.image,
       rarity: res.data.rarity
-    }
+    })
   }
   useEffect(() => {
     UpdateVinylDetails()
@@ -28,7 +33,6 @@ const UpdateListing = ({ user }) => {
   const handleSubmit = (e) => {
     e.preventDefault()
     axios.put(`${BASE_URL}/feed/${user.id}`, formState)
-    setFormState(initialFormState)
   }
 
   return (
@@ -42,7 +46,7 @@ const UpdateListing = ({ user }) => {
           className="input"
           type="text"
           id="title"
-          value={formState.title}
+          value={formState?.title}
           onChange={handleChange}
         />
         <label className="label" htmlFor="artist">
@@ -52,7 +56,7 @@ const UpdateListing = ({ user }) => {
           id="artist"
           className="input"
           type="text"
-          value={formState.artist}
+          value={formState?.artist}
           onChange={handleChange}
         />
         <br></br>
@@ -63,7 +67,7 @@ const UpdateListing = ({ user }) => {
           id="genre"
           className="input"
           type="text"
-          value={formState.genre}
+          value={formState?.genre}
           onChange={handleChange}
         />
         <br></br>
@@ -76,7 +80,7 @@ const UpdateListing = ({ user }) => {
           type="number"
           min="1"
           max="1000000"
-          value={formState.price}
+          value={formState?.price}
           onChange={handleChange}
         />
         <br></br>
@@ -87,7 +91,7 @@ const UpdateListing = ({ user }) => {
           id="description"
           className="input"
           type="text"
-          value={formState.description}
+          value={formState?.description}
           onChange={handleChange}
         />
         <br></br>
@@ -98,7 +102,7 @@ const UpdateListing = ({ user }) => {
           id="status"
           className="input"
           type="text"
-          value={formState.status}
+          value={formState?.status}
           onChange={handleChange}
         >
           <option className="option" value="Buy">
@@ -119,7 +123,7 @@ const UpdateListing = ({ user }) => {
           id="image"
           className="input"
           type="link"
-          value={formState.image}
+          value={formState?.image}
           onChange={handleChange}
         />
         <br></br>
@@ -132,7 +136,7 @@ const UpdateListing = ({ user }) => {
           type="number"
           min="1"
           max="10"
-          value={formState.rarity}
+          value={formState?.rarity}
           onChange={handleChange}
         />
         <br></br>
