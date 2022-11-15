@@ -2,7 +2,7 @@ import axios from 'axios'
 import { useState } from 'react'
 import { BASE_URL } from '../globals'
 
-const UserListings = ({ user }) => {
+const CreateListings = ({ user }) => {
   const initialFormState = {
     title: '',
     artist: '',
@@ -147,4 +147,4 @@ const UserListings = ({ user }) => {
   )
 }
 
-export default UserListings
+export default CreateListings
