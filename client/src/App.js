@@ -1,6 +1,5 @@
 import './App.css'
 import { useState, useEffect } from 'react'
-import { useNavigate } from 'react-router-dom'
 import { Route, Routes } from 'react-router'
 import NavBar from './components/Nav'
 import Feed from './pages/Feed'
@@ -17,56 +16,12 @@ const App = () => {
   const [authenticated, toggleAuthenticated] = useState(false)
   const [user, setUser] = useState(null)
   const [vinylList, setVinylList] = useState([])
-  const navigate = useNavigate()
-  const [selectedVinyl, setSelectedVinyl] = useState([])
 
   const getFeed = async () => {
     const res = await axios.get(`${BASE_URL}/feed`)
     console.log(res.data)
     setVinylList(res.data)
   }
-
-  // const initialCommentState = {
-  // body: '',
-  // vinylId: '',
-  // userId: ''
-  // }
-
-  // const [commentFromState, setCommentFormState] = useState(initialReviewState)
-
-  // const handleCommentChange = (e) => {
-  // setCommentFormState({
-  // ...commentFromState,
-  // [evt.target.id]: evt.target.value,
-  // vinyl_id: selectedVinyl.id,
-  // user_id: user.id
-  // })
-  // }
-
-  // const handleCommentSubmit = async (e) => {
-  //   evt.preventDefault()
-  //   if (editing) {
-  //     await UpdateComment(commentFromState)
-  //     setCommentFormState(initialCommentState)
-  //     let modifiedVinyl = selectedVinyl
-  //     navigate('/')
-  //  } else {
-  // await CreateComment({
-  //   body: commentFromState.body,
-  //   vinylId: selectedVinyl.id,
-  //   userId: user.id
-  // })
-  // let modifiedVinyl = selectedVinyl
-  // modifiedVinyl.vinyl_comment.push(commentFromState)
-  // navigate('/')
-  // }
-
-  // const editComment = (comment, index) => {
-  // setEditing(true)
-  // setComment(comment)
-  // setCommentFormState(comment)
-  // navigate('/comments/edit', {st})
-  // }
 
   const handleLogOut = () => {
     setUser(null)

@@ -3,8 +3,9 @@ import { useParams } from 'react-router-dom'
 import axios from 'axios'
 import { BASE_URL } from '../globals'
 import { useNavigate } from 'react-router-dom'
+// import CommentForm from '../components/CommentForm'
 
-const VinylDetails = ({ user }) => {
+const VinylDetails = ({ user, authenticated }) => {
   let navigate = useNavigate()
 
   console.log('user', user)
@@ -42,22 +43,6 @@ const VinylDetails = ({ user }) => {
         </div>
         <button onClick={AddToCart}>Add to Cart placeholder button</button>
       </div>
-      {/* <ReviewForm
-          user={user}
-          authenticated={authenticated}
-          handleSubmit={handleSubmit}
-          handleCommentChange={handleCommentChange} 
-          reviewFromState={reviewFromState}
-          />
-          <div className="vinyl-comment-grid">
-          {selectedVinyl.}
-          />
-          <div className="vinyl-comment-grid">
-          {selectedVinyl.vinyl_comment.map((comment, index) =>(
-            <div className="comment" key={comment.id}>
-            <h2>{comment.body}</h2>
-            <h2>{comment.user_comment.username}</h2>
-          ))*/}
     </>
   )
 }
