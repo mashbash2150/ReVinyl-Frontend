@@ -8,6 +8,7 @@ const NavBar = ({ authenticated, user, handleLogOut }) => {
                 <NavLink to={`/library/${user.id}`} className='nav-link library'>User Library</NavLink>
                 <NavLink to='/about' className='nav-link about'>About</NavLink>
                 <NavLink onClick={handleLogOut} to='/' className='nav-link logout'>Log Out</NavLink>
+                <NavLink to='/listings' className='nav-link listings'>Create Listing</NavLink>
             </div>
         );
     }
@@ -33,7 +34,7 @@ const NavBar = ({ authenticated, user, handleLogOut }) => {
                     <h1 className='nav-title'>ReVinyl</h1>
                 </div>
             </NavLink>
-            <h1 className='username-display'>Welcome{user && ` ${user.username}`}!</h1>
+            <h1 className='username-display'>Welcome{user && ` ${user.email}`}!</h1>
             <div className='nav-links'>
                 <NavLink to='/' className='nav-link home'>Feed</NavLink>
                 {authenticated && user ? userOptions : globalOptions}

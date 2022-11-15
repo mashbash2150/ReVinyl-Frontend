@@ -11,6 +11,7 @@ import { CheckSession } from './services/Auth'
 import axios from 'axios'
 import { BASE_URL } from './globals'
 import VinylDetails from './pages/VinylDetails'
+import UserListings from './pages/UserListings'
 
 const App = () => {
   const [authenticated, toggleAuthenticated] = useState(false)
@@ -81,6 +82,7 @@ const App = () => {
           />
           <Route path="/about" element={<About />} />
           <Route path="/:vinyl_id" element={<VinylDetails user={user} />} />
+          <Route path="/listings" element={<UserListings user={user} />} />
         </Routes>
       </main>
       <header className="App-header">
