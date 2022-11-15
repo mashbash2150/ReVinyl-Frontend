@@ -74,7 +74,7 @@ const App = () => {
           />
           <Route path="/register" element={<Register />} />
           <Route
-            path="/library"
+            path='/library/:user_id'
             element={<Library user={user} authenticated={authenticated}  />}
           />
           <Route path="/about" element={<About />} />

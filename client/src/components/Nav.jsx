@@ -5,7 +5,7 @@ const NavBar = ({ authenticated, user, handleLogOut }) => {
     if (user) {
         userOptions = (
             <div>
-                <NavLink to='/library' className='nav-link library'>User Library</NavLink>
+                <NavLink to={`/library/${user.id}`} className='nav-link library'>User Library</NavLink>
                 <NavLink to='/about' className='nav-link about'>About</NavLink>
                 <NavLink onClick={handleLogOut} to='/' className='nav-link logout'>Log Out</NavLink>
             </div>

@@ -1,17 +1,27 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 // import { GetVinyls } from '../services/VinylServices'
 import { useNavigate } from 'react-router-dom'
 
 const Feed = ({ user, authenticated, vinylList }) => {
   const navigate = useNavigate()
   const [selectedVinyl, setSelectedVinyl] = useState([])
+  const [loggedInUser,setLoggedInUser]=useState(null)
 
+  const setActiveUser=()=>{
+    console.log("User",user.id)
+    setLoggedInUser(user.id)
+  }
 
 
   const chooseVinyl = (selected) => {
     setSelectedVinyl(selected)
     navigate(`/feed/${selected.id}`)
   }
+
+  useEffect(() => {
+   setActiveUser()
+  }, [])
+  
 
 
   return (user && authenticated) ? (
