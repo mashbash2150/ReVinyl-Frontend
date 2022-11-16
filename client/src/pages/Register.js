@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { RegisterUser } from '../services/Auth'
+import {Link} from 'react-router-dom'
 
 const Register = () => {
   const navigate = useNavigate()
@@ -34,9 +35,9 @@ const Register = () => {
     <div className="signin col">
       <div className="card-overlay centered">
         <form className="col" onSubmit={handleSubmit}>
-          <div className="input-wrapper">
-            <label htmlFor="name">Name</label>
+            <label className="label" htmlFor="name">Name</label>
             <input
+            className="input"
               onChange={handleChange}
               name="name"
               type="text"
@@ -44,10 +45,10 @@ const Register = () => {
               value={formValues.name}
               required
             />
-          </div>
-          <div className="input-wrapper">
-            <label htmlFor="email">Email</label>
+     
+            <label  className="label" htmlFor="email">Email</label>
             <input
+            className="input"
               onChange={handleChange}
               name="email"
               type="email"
@@ -55,10 +56,9 @@ const Register = () => {
               value={formValues.email}
               required
             />
-          </div>
-          <div className="input-wrapper">
-            <label htmlFor="username">Username</label>
+            <label  className="label" htmlFor="username">Username</label>
             <input
+            className="input"
               onChange={handleChange}
               name="username"
               type="text"
@@ -66,28 +66,24 @@ const Register = () => {
               value={formValues.username}
               required
             />
-          </div>
-
-          <div className="input-wrapper">
-            <label htmlFor="password">Password</label>
+            <label  className="label" htmlFor="password">Password</label>
             <input
+            className="input"
               onChange={handleChange}
               type="password"
               name="password"
               value={formValues.password}
               required
             />
-          </div>
-          <div className="input-wrapper">
-            <label htmlFor="confirmPassword">Confirm Password</label>
+            <label  className="label" htmlFor="confirmPassword">Confirm Password</label>
             <input
+            className="input"
               onChange={handleChange}
               type="password"
               name="confirmPassword"
               value={formValues.confirmPassword}
               required
             />
-          </div>
           <button
             disabled={
               !formValues.email ||
@@ -98,6 +94,9 @@ const Register = () => {
             Register
           </button>
         </form>
+        <Link to={'/login'}>
+        <button>Already A User?</button>
+      </Link>
       </div>
     </div>
   )

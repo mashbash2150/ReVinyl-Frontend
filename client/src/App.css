@@ -17,7 +17,8 @@
 body {
   margin: 0 auto;
   font-family: 'Rajdhani', sans-serif;
-  background-color: rgba(144, 142, 142, 0.397);
+  background-color: rgba(110, 95, 69, 0.684);
+
 }
 
 
@@ -41,8 +42,8 @@ form {
 }
 
 .vinyl-card {
-  border: 1px solid black;
-  background-color: rgba(101, 101, 99, 0.5);
+
+  background-color: rgba(239, 239, 238, 0.522);
 }
 
 .container {
@@ -169,7 +170,7 @@ button {
 }
 
 .status-banner {
-  background-color: rgba(157, 74, 44, 0.5);
+  background-color: rgba(29, 29, 28, 0.637);
   font-size: 1.75vw;
   font-style: italic;
 }

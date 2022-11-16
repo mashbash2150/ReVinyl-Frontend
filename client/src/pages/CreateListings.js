@@ -30,7 +30,7 @@ const CreateListings = ({ user }) => {
 
   return (
     <div className="ListFormContainer">
-      <div>UserListings</div>
+      <div></div>
       <form onSubmit={handleSubmit}>
         <label className="label" htmlFor="title">
           Album Title:

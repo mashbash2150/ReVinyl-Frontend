@@ -1,7 +1,7 @@
 const About = () => {
   return (
     <div className="about-page">
-      <h1> About ReVinyl </h1>
+      <h1><u> About ReVinyl </u></h1>
       <p className="about-paragraph">
         ReVinyl is a hub for record enthusiasts to trade, buy, and discuss their
         favorite vinyls from today and the past. Digital formats and streaming
@@ -11,7 +11,7 @@ const About = () => {
         lost in a journey.
       </p>
       <div className="team">
-          <h2>Meet the Team</h2>
+          <h2><u>Meet the Team</u></h2>
           <p className="about-blurb" > Revinyl was created by the dedicated team you see here. Over the last two years, millions of people have joined the vinyl record trade. As such, we as a group realized the supply and demand crisis for buying, selling, and trading vinyls. SO, we are here to show you ReVinyl! Browse through our profiles and explore the tabs to find exactly what you need, to get that sweet sweet vinyl you've always wanted in your hands today. 
           </p>
           <div className="team-grid">

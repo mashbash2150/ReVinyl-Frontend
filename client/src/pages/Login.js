@@ -23,9 +23,9 @@ const Login = ({ toggleAuthenticated, setUser }) => {
     <div className="signin col">
       <div className="card-overlay centered">
         <form className="col" onSubmit={handleSubmit}>
-          <div className="input-wrapper">
-            <label htmlFor="email">Email</label>
+            <label  className="label"htmlFor="email">Email</label>
             <input
+             className="input"
               onChange={handleChange}
               name="email"
               type="email"
@@ -33,17 +33,15 @@ const Login = ({ toggleAuthenticated, setUser }) => {
               value={formValues.email}
               required
             />
-          </div>
-          <div className="input-wrapper">
-            <label htmlFor="password">Password</label>
+            <label className="label"htmlFor="password">Password</label>
             <input
+             className="input"
               onChange={handleChange}
               type="password"
               name="password"
               value={formValues.password}
               required
             />
-          </div>
           <button disabled={!formValues.email || !formValues.password}>
             Sign In
           </button>
