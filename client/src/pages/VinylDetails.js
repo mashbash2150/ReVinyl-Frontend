@@ -46,7 +46,8 @@ const VinylDetails = ({ user, authenticated }) => {
             <div>Description: {vinylDetails.description}</div>
           </div>
         </div>
-        <button className="zoom" onClick={AddToCart}>Add to Wish List</button>
+        <button className="zoom card-button" onClick={AddToCart}>Add to Wish List</button>
+        <button className="zoom card-button">Contact Seller</button>
       </div>
     </>
   )
