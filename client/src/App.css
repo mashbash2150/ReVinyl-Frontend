@@ -17,7 +17,7 @@
 body {
   margin: 0 auto;
   font-family: 'Rajdhani', sans-serif;
-  background-color: rgba(110, 95, 69, 0.684);
+  background-color: #D9CBB5;
 
 }
 
@@ -41,16 +41,24 @@ form {
   text-align: center;
 }
 
-.vinyl-card {
 
-  background-color: rgba(239, 239, 238, 0.522);
+
+.large-circle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(47, 47, 45, 0.647);
+  width: 45vw;
+  height: 45vw;
+  border-radius: 50%;
 }
 
 .container {
   margin-top: 5vh;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(20vw, 1fr));
-  grid-gap: 2vw;
+  grid-template-columns: repeat(auto-fill, minmax(40vw, 1fr));
+  grid-gap: 5vw;
 
 }
 
@@ -78,11 +86,15 @@ form {
 
 .vinyl-img img {
   object-fit: cover;
-  width: 19vw;
-  height: 19vw;
+  width: 21vw;
+  height: 21vw;
+  border-radius: 50%;
   text-align: center;
-  padding: 1vw;
   cursor: pointer;
+  align-self: center;
+  justify-self: center;
+  padding: 2vh 0;
+
 
 }
 
@@ -122,7 +134,7 @@ form {
 .nav-container {
   justify-content: space-evenly;
   align-self: end;
-  background-color: rgba(157, 74, 44, 0.5);
+  background-color: #6E2F1B;
   position: sticky;
   top: 30;
 }
@@ -170,19 +182,23 @@ button {
 }
 
 .status-banner {
-  background-color: rgba(29, 29, 28, 0.637);
+  background-color: rgba(24, 59, 24, 0.377);
   font-size: 1.75vw;
   font-style: italic;
+  color:
+    #23221A;
+  padding: 1vh;
 }
 
 .album-title {
   font-size: 2vh;
-  padding: 2vh 0 1vh 0;
   text-shadow: 0 0 2px #9b91289b;
+  color: white;
 }
 
 .album-details {
   font-size: 1.75vh;
+  color: white;
 }
 
 .pfp {
