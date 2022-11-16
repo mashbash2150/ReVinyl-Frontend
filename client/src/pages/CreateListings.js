@@ -1,8 +1,10 @@
 import axios from 'axios'
 import { useState } from 'react'
 import { BASE_URL } from '../globals'
+import { useNavigate } from 'react-router-dom'
 
 const CreateListings = ({ user }) => {
+  let navigate = useNavigate()
   const initialFormState = {
     title: '',
     artist: '',
@@ -20,10 +22,11 @@ const CreateListings = ({ user }) => {
     setFormState({ ...formState, [e.target.id]: e.target.value })
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    axios.post(`${BASE_URL}/feed/create/${user.id}`, formState)
+    await axios.post(`${BASE_URL}/feed/create/${user.id}`, formState)
     setFormState(initialFormState)
+    navigate(`/listings`)
   }
 
   return (

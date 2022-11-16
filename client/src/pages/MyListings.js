@@ -33,6 +33,9 @@ const MyListings = ({ user }) => {
 
   return (
     <div className="grid col-4">
+      <Link to={`/listings/create`}>
+        <button>Create Listing</button>
+      </Link>
       {userList.map((record) => (
         <div className="card" key={record.id}>
           <p>Title: {record.title}</p>
@@ -46,7 +49,7 @@ const MyListings = ({ user }) => {
                 <img src={record.image} alt="vinyl" />
               </div>
               <Link to={`/listings/update/${record.id}`}>
-                <button>Update Listing</button>{' '}
+                <button>Update Listing</button>
               </Link>
               <button onClick={() => deleteListing(record)}>
                 Delete Listing

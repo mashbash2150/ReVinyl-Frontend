@@ -2,8 +2,10 @@ import axios from 'axios'
 import { useEffect, useState } from 'react'
 import { BASE_URL } from '../globals'
 import { useParams } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 const UpdateListing = ({ user }) => {
+  let navigate=useNavigate()
   let { vinyl_id } = useParams()
   const [formState, setFormState] = useState()
   const [vinylDetails, setVinylDetails] = useState([])
@@ -30,9 +32,10 @@ const UpdateListing = ({ user }) => {
     setFormState({ ...formState, [e.target.id]: e.target.value })
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    axios.put(`${BASE_URL}/feed/${user.id}`, formState)
+    await axios.put(`${BASE_URL}/feed/${vinyl_id}`,formState)
+    navigate(`/listings`)
   }
 
   return (
@@ -140,7 +143,7 @@ const UpdateListing = ({ user }) => {
           onChange={handleChange}
         />
         <br></br>
-        <button className="addListingButton" type="submit">
+        <button className="addListingButton" type='submit'>
           Update Listing
         </button>
       </form>
