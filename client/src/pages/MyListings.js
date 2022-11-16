@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom'
 const MyListings = ({ user }) => {
   console.log(user)
   let navigate = useNavigate()
-  const [userList, setUserList] = useState([])
+  const [userList, setUserList] = useState(null)
   const [selectedListing, setSelectedListing] = useState([])
 
   const getUserListings = async () => {
@@ -24,27 +24,28 @@ const MyListings = ({ user }) => {
   const deleteListing = async (selected) => {
     await setSelectedListing(selected.id)
     await axios.delete(`${BASE_URL}/feed/${selected.id}`)
-    window.location.reload()
+    getUserListings()
   }
 
   useEffect(() => {
     getUserListings()
-  }, [])
+  }, [user])
 
   return (
     <div className="grid col-4">
       <Link to={`/listings/create`}>
         <button>Create Listing</button>
       </Link>
-      {userList.map((record) => (
-        <div className="card" key={record.id}>
+      {userList?.map((record) => (
+        <div className="vinyl-card">
+        <div className="vinyl-text" key={record.id}>
           <p>Title: {record.title}</p>
           <p>Artist: {record.artist}</p>
           <p>Genre: {record.genre}</p>
           <p>Price: {record.price}</p>
           <p>Status: {record.status}</p>
           <div>
-            <div className="vinyl-card" key={record.id}>
+            <div className="vinyl-img" key={record.id}>
               <div onClick={() => chooseListing(record)}>
                 <img src={record.image} alt="vinyl" />
               </div>
@@ -54,6 +55,7 @@ const MyListings = ({ user }) => {
               <button onClick={() => deleteListing(record)}>
                 Delete Listing
               </button>
+              </div>
             </div>
           </div>
         </div>

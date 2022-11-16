@@ -32,16 +32,21 @@ const VinylDetails = ({ user, authenticated }) => {
   return (
     <>
       <div>VinylDetails</div>
-      <div className="vinyls" key={vinylDetails.id}>
-        <h2>Title: {vinylDetails.title}</h2>
-        <h3>Artist: {vinylDetails.artist}</h3>
-        <p>Genre: {vinylDetails.genre}</p>
+      <div className="vinyl-card vinyls" key={vinylDetails.id}>
+        <div className="vinyl-text">
+        <div>Album Title: {vinylDetails.title}</div>
+        <div>Artist: {vinylDetails.artist}</div>
+        <div>Genre: {vinylDetails.genre}</div>
+        <div>Description: {vinylDetails.description}</div>
+        <div>Status: {vinylDetails.status}</div>
+        <div>Price: {vinylDetails.price}</div>
+        </div>
         <div>
-          <div className="vinyl-card" key={vinylDetails.id}>
+          <div className="vinyl-img" key={vinylDetails.id}>
             <img src={vinylDetails.image} alt="vinyl" />
           </div>
         </div>
-        <button onClick={AddToCart}>Add to Cart placeholder button</button>
+        <button onClick={AddToCart}>Add to User Library</button>
       </div>
     </>
   )

@@ -5,10 +5,36 @@
   margin-bottom: auto;
 }
 
-
-
 .logo {
   height: 150px;
   width: 200px;
   margin-left: 0px;
+}
+
+body {
+  margin: 0 auto;
+}
+
+
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+
+}
+
+.label {
+  padding: 3vh 0 1vh 0;
+}
+
+.input {
+  height: 4vh;
+  width: 35vw;
+  text-align: center;
+}
+
+.vinyl-card {
+  border: 2px solid black
 }
