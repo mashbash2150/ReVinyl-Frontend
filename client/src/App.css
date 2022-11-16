@@ -213,12 +213,16 @@ button {
 
 .team {
   font-size: 25px;
-  font-family: 'Times New Roman', Times, serif;
-  font-style: italic;
+  font-family: 'Rajdhani', sans-serif;
 }
 
 .about-page {
   font-size: 25px;
-  font-family: 'Times New Roman', Times, serif;
-  font-style: italic;
+  font-family: 'Rajdhani', sans-serif;
+
+}
+
+h1,
+h2 {
+  font-family: 'Lobster', cursive;
 }
