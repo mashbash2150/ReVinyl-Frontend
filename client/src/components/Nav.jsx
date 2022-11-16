@@ -23,23 +23,19 @@ const NavBar = ({ authenticated, user, handleLogOut }) => {
 
 
     return (
-        <nav>
-            <NavLink to='/' className='nav-logo-link'>
-                <div className='logo-wrapper' alt='logo'>
-                    <img
-                        className='logo'
-                        src='https://wallpapercrafter.com/desktop/28304-vinyl-record-music-vector-heap-4k.jpg'
-                        alt='nav banner'
-                    />
-                    <h1 className='nav-title'>ReVinyl</h1>
-                </div>
-            </NavLink>
-            <h1 className='username-display'>Welcome{user && ` ${user.email}`}!</h1>
-            <div className='nav-links'>
-                <NavLink to='/' className='nav-link home'>Feed</NavLink>
-                {authenticated && user ? userOptions : globalOptions}
+        <div className="header">
+            <div className="header-text">ReVinyl
+
             </div>
-        </nav>
+            <nav>
+
+                <h1 className='username-display'>Welcome{user && ` ${user.email}`}!</h1>
+                <div className='nav-links'>
+                    <NavLink to='/' className='nav-link home'>Feed</NavLink>
+                    {authenticated && user ? userOptions : globalOptions}
+                </div>
+            </nav>
+        </div>
     );
 };
 
