@@ -16,7 +16,6 @@ const CreateListings = ({ user }) => {
     rarity: ''
   }
   const [formState, setFormState] = useState(initialFormState)
-  //   const [input, setInput] = useState()
 
   const handleChange = (e) => {
     setFormState({ ...formState, [e.target.id]: e.target.value })

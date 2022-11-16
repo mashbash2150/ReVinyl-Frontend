@@ -27,9 +27,10 @@ const NavBar = ({ authenticated, user, handleLogOut }) => {
             <div className="header-text">ReVinyl
 
             </div>
-            <nav>
+            <h1 className='username-display'>Welcome{user && ` ${user.email}`}!</h1>
+            <nav className="nav-container">
 
-                <h1 className='username-display'>Welcome{user && ` ${user.email}`}!</h1>
+
                 <div className='nav-links'>
                     <NavLink to='/' className='nav-link home'>Feed</NavLink>
                     {authenticated && user ? userOptions : globalOptions}
