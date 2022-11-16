@@ -36,6 +36,7 @@ const MyListings = ({ user }) => {
       <Link to={`/listings/create`}>
         <button>Create Listing</button>
       </Link>
+      <div className="container">
       {userList?.map((record) => (
         <div className="vinyl-card">
         <div className="vinyl-text" key={record.id}>
@@ -60,6 +61,7 @@ const MyListings = ({ user }) => {
           </div>
         </div>
       ))}
+    </div>
     </div>
   )
 }

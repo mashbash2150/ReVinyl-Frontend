@@ -31,10 +31,10 @@ const VinylDetails = ({ user, authenticated }) => {
 
   return (
     <>
-      <div>VinylDetails</div>
+      <div className="container">VinylDetails:</div>
       <div className="vinyl-card vinyls" key={vinylDetails.id}>
         <div className="vinyl-text">
-        <div>Album Title: {vinylDetails.title}</div>
+        <h2>Album Title: {vinylDetails.title}</h2>
         <div>Artist: {vinylDetails.artist}</div>
         <div>Genre: {vinylDetails.genre}</div>
         <div>Description: {vinylDetails.description}</div>

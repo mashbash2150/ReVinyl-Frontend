@@ -30,14 +30,16 @@ export const Library = () => {
   }
 
   return (
-    <div className="Library-Details">
+    <div className="container">
       {libraryDetails.map((record) => (
-        <div className="card" key={record.id}>
+        <div className="vinyl-card" key={record.id}>
+          <div className="vinyl-text">
           <h2>Title: {record.title}</h2>
           <h3>Artist: {record.artist}</h3>
           <h3>Genre: {record.genre}</h3>
+          </div>
           <div>
-            <div className="vinyl-card" key={record.id}>
+            <div className="vinyl-img" key={record.id}>
               <img src={record.image} alt="vinyl" />
             </div>
           </div>

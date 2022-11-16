@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Rajdhani&display=swap');
+
 .App {
   text-align: center;
   margin-left: auto;
@@ -13,6 +16,7 @@
 
 body {
   margin: 0 auto;
+  font-family: 'Rajdhani', sans-serif;
 }
 
 
@@ -36,5 +40,22 @@ form {
 }
 
 .vinyl-card {
-  border: 2px solid black
+  border: 2px solid black;
+}
+
+.container {
+  margin-top: 5vh;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(29vw, 1fr));
+  grid-gap: 2vw;
+
+}
+
+.vinyl-img img {
+  object-fit: cover;
+  width: 28vw;
+  height: 28vw;
+  text-align: center;
+  padding: 1vw;
+
 }
