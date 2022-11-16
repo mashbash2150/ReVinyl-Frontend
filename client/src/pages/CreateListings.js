@@ -141,7 +141,7 @@ const CreateListings = ({ user }) => {
           required
         />
         <br></br>
-        <button className="addListingButton" type="submit">
+        <button className="zoom addListingButton" type="submit">
           Add Listing
         </button>
       </form>

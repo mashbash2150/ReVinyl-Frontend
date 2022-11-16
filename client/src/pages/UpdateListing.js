@@ -99,7 +99,7 @@ const UpdateListing = ({ user }) => {
         />
         <br></br>
         <label className="label" htmlFor="status">
-          Status:
+          Looking to:
         </label>
         <select
           id="status"
@@ -143,7 +143,7 @@ const UpdateListing = ({ user }) => {
           onChange={handleChange}
         />
         <br></br>
-        <button className="addListingButton" type='submit'>
+        <button className="card-button addListingButton" type='submit'>
           Update Listing
         </button>
       </form>

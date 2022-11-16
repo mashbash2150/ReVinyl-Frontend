@@ -4,38 +4,40 @@ const NavBar = ({ authenticated, user, handleLogOut }) => {
     let userOptions;
     if (user) {
         userOptions = (
-            <div>
-                <NavLink to={`/library/${user.id}`} className='nav-link library'>User Library</NavLink>
-                <NavLink to='/about' className='nav-link about'>About</NavLink>
-                <NavLink onClick={handleLogOut} to='/' className='nav-link logout'>Log Out</NavLink>
-                <NavLink to='/listings' className='nav-link listings'>My Listings</NavLink>
+            <div className="nav-text">
+                <NavLink to='/' className='zoom nav-link home'>Home</NavLink>
+                <NavLink to={`/library/${user.id}`} className='zoom nav-links library'>Wish List</NavLink>
+                <NavLink to='/about' className='zoom nav-links about'>About</NavLink>
+                <NavLink to='/listings' className='zoom nav-links listings'>My Listings</NavLink>
+                <NavLink onClick={handleLogOut} to='/' className='zoom nav-links logout'>Log Out</NavLink>
             </div>
         );
     }
 
     const globalOptions = (
-        <div>
-            <NavLink to='/about' className='nav-link about'>About</NavLink>
-            <NavLink to='/login' className='nav-link login'>Login</NavLink>
-            <NavLink to='/register' className='nav-link register'>Register</NavLink>
+        <div className="nav-text">
+            <NavLink to='/' className='zoom nav-link home'>Home</NavLink>
+            <NavLink to='/about' className='zoom nav-links about'>About</NavLink>
+            <NavLink to='/login' className='zoom nav-links login'>Login</NavLink>
+            <NavLink to='/register' className='zoom nav-links register'>Register</NavLink>
         </div>
     );
 
 
     return (
-        <div className="header">
-            <div className="header-text">ReVinyl
+        <div>
+            <div className="header">
+                <div className="header-text">ReVinyl</div>
+                <h1 className='username-display'>Welcome{user && ` ${user.email}`}!</h1>
+                <nav className="nav-container">
 
+
+                    <div>
+                        {authenticated && user ? userOptions : globalOptions}
+                    </div>
+                </nav>
             </div>
-            <h1 className='username-display'>Welcome{user && ` ${user.email}`}!</h1>
-            <nav className="nav-container">
 
-
-                <div className='nav-links'>
-                    <NavLink to='/' className='nav-link home'>Feed</NavLink>
-                    {authenticated && user ? userOptions : globalOptions}
-                </div>
-            </nav>
         </div>
     );
 };

@@ -42,23 +42,46 @@ form {
 
 .vinyl-card {
   border: 1px solid black;
-  background-color: rgba(101, 101, 99, 0.746);
+  background-color: rgba(101, 101, 99, 0.5);
 }
 
 .container {
   margin-top: 5vh;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(29vw, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(20vw, 1fr));
   grid-gap: 2vw;
 
 }
 
+.details-container {
+
+  width: 30vw;
+  text-align: center;
+}
+
+.wish-list-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-content: space-between;
+
+}
+
+.wish-list-card {
+  margin-top: 4vh;
+  border: 1px solid black;
+  background-color: rgba(101, 101, 99, 0.5);
+  width: 30vw;
+  padding: 0 0 1.5vh 0;
+}
+
 .vinyl-img img {
   object-fit: cover;
-  width: 28vw;
-  height: 28vw;
+  width: 19vw;
+  height: 19vw;
   text-align: center;
   padding: 1vw;
+  cursor: pointer;
 
 }
 
@@ -70,6 +93,7 @@ form {
   opacity: 0.7;
   height: 35vh;
   border-bottom: 2px solid black;
+
 }
 
 .header-text {
@@ -90,9 +114,94 @@ form {
 
 .nav-links {
 
-  background-color: rgba(182, 61, 61, 0.864);
+  justify-content: space-evenly;
+
 }
 
 .nav-container {
+  justify-content: space-evenly;
   align-self: end;
+  background-color: rgba(157, 74, 44, 0.5);
+  position: sticky;
+  top: 30;
+}
+
+.nav-text {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  font-size: 2.5vh;
+
+}
+
+.nav-text a {
+  color: white;
+  text-decoration: none;
+}
+
+.username-display {
+  text-shadow: 0 0 2px #b1a008;
+  font-size: 3vh;
+}
+
+
+button {
+  font-size: 1.5vw;
+  padding: 1vh;
+  margin-top: 3vh;
+  background-color: rgba(157, 74, 44, 0.5);
+  font-family: 'Rajdhani', sans-serif;
+  transition: transform .2s;
+  cursor: pointer;
+}
+
+.card-button {
+  font-size: 1vw;
+  margin: 0 1vw 0 1vw;
+}
+
+.zoom {
+  transition: transform .2s;
+}
+
+.zoom:hover {
+  transform: scale(1.1);
+}
+
+.status-banner {
+  background-color: rgba(197, 187, 74, 0.566);
+  font-size: 1.75vw;
+  font-style: italic;
+}
+
+.album-title {
+  font-size: 2vh;
+  padding: 2vh 0 1vh 0;
+  text-shadow: 0 0 2px #9b91289b;
+}
+
+.album-details {
+  font-size: 1.75vh;
+}
+
+.pfp {
+  object-fit: cover;
+  width: 28vw;
+  height: 28vw;
+  text-align: center;
+  padding: 1vw;
+  cursor: pointer;
+
+}
+
+.team {
+  font-size: 25px;
+  font-family: 'Times New Roman', Times, serif;
+  font-style: italic;
+}
+
+.about-page {
+  font-size: 25px;
+  font-family: 'Times New Roman', Times, serif;
+  font-style: italic;
 }

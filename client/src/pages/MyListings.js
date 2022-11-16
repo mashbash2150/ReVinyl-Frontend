@@ -30,7 +30,7 @@ const MyListings = ({ user }) => {
   useEffect(() => {
     getUserListings()
   }, [user])
-
+ 
   return (
     <div className="grid col-4">
       <Link to={`/listings/create`}>
@@ -43,17 +43,17 @@ const MyListings = ({ user }) => {
           <p>Title: {record.title}</p>
           <p>Artist: {record.artist}</p>
           <p>Genre: {record.genre}</p>
-          <p>Price: {record.price}</p>
-          <p>Status: {record.status}</p>
+          <p>Price: ${record.price}</p>
+          <p>Looking to: {record.status}</p>
           <div>
             <div className="vinyl-img" key={record.id}>
               <div onClick={() => chooseListing(record)}>
                 <img src={record.image} alt="vinyl" />
               </div>
               <Link to={`/listings/update/${record.id}`}>
-                <button>Update Listing</button>
+                <button className="zoom card-button">Update Listing</button>
               </Link>
-              <button onClick={() => deleteListing(record)}>
+              <button className="zoom card-button" onClick={() => deleteListing(record)}>
                 Delete Listing
               </button>
               </div>

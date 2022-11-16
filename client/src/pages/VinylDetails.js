@@ -3,7 +3,6 @@ import { useParams } from 'react-router-dom'
 import axios from 'axios'
 import { BASE_URL } from '../globals'
 import { useNavigate } from 'react-router-dom'
-// import CommentForm from '../components/CommentForm'
 
 const VinylDetails = ({ user, authenticated }) => {
   let navigate = useNavigate()
@@ -31,22 +30,23 @@ const VinylDetails = ({ user, authenticated }) => {
 
   return (
     <>
-      <div className="container">VinylDetails:</div>
-      <div className="vinyl-card vinyls" key={vinylDetails.id}>
+      <div className="details-container"></div>
+      <div className="vinyl-details-card" key={vinylDetails.id}>
         <div className="vinyl-text">
         <h2>Album Title: {vinylDetails.title}</h2>
         <div>Artist: {vinylDetails.artist}</div>
         <div>Genre: {vinylDetails.genre}</div>
-        <div>Description: {vinylDetails.description}</div>
-        <div>Status: {vinylDetails.status}</div>
-        <div>Price: {vinylDetails.price}</div>
+        <div>Looking to: {vinylDetails.status}</div>
+        <div>Price: ${vinylDetails.price}</div>
+        <div>Rarity: {vinylDetails.rarity}</div>
         </div>
         <div>
           <div className="vinyl-img" key={vinylDetails.id}>
             <img src={vinylDetails.image} alt="vinyl" />
+            <div>Description: {vinylDetails.description}</div>
           </div>
         </div>
-        <button onClick={AddToCart}>Add to User Library</button>
+        <button className="zoom" onClick={AddToCart}>Add to Wish List</button>
       </div>
     </>
   )

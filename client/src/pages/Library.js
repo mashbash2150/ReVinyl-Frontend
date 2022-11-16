@@ -19,10 +19,6 @@ export const Library = () => {
     GetLibraryDetails()
   }, [])
 
-  // const chooseVinyl = (selected) => {
-  //   setSelectedVinyl(selected)
-  // }
-
   const chooseVinlyToDelete = async (selected) => {
     await setSelectedVinyl(selected.id)
     await axios.delete(`${BASE_URL}/library/${user_id}/${selected.id}`)
@@ -30,21 +26,22 @@ export const Library = () => {
   }
 
   return (
-    <div className="container">
+    <div className="wish-list-container">
       {libraryDetails.map((record) => (
-        <div className="vinyl-card" key={record.id}>
+        <div className="wish-list-card" key={record.id}>
           <div className="vinyl-text">
           <h2>Title: {record.title}</h2>
           <h3>Artist: {record.artist}</h3>
           <h3>Genre: {record.genre}</h3>
+          <h3>Price: ${record.price}</h3>
           </div>
           <div>
             <div className="vinyl-img" key={record.id}>
               <img src={record.image} alt="vinyl" />
             </div>
           </div>
-          <button onClick={() => chooseVinlyToDelete(record)}>
-            Remove From Library
+          <button className="zoom" onClick={() => chooseVinlyToDelete(record)}>
+            Remove From Wish List
           </button>
         </div>
       ))}

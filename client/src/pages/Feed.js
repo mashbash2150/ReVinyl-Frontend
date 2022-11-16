@@ -1,11 +1,9 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 const Feed = ({ user, authenticated, vinylList }) => {
-  const [selectedListing, setSelectedListing] = useState([])
   const navigate = useNavigate()
   const [selectedVinyl, setSelectedVinyl] = useState([])
-  const [loggedInUser, setLoggedInUser] = useState(null)
 
   const chooseVinyl = (selected) => {
     setSelectedVinyl(selected)
@@ -17,9 +15,12 @@ const Feed = ({ user, authenticated, vinylList }) => {
       {vinylList.map((record) => (
         <div className="vinyl-card">
         <div className="vinyl-text card" key={record.id}>
-          <h2>Title: {record.title}</h2>
-          <div>Artist: {record.artist}</div>
+          <div className="album-title">Title: <strong> {record.title}</strong></div>
+          <div className="album-details">
+          <div >Artist: {record.artist}</div>
           <div>Genre: {record.genre}</div>
+          <div>Price: ${record.price}</div>
+          </div>
           <div>
             <div className="vinyl-img" key={record.id}>
               <div onClick={() => chooseVinyl(record)}>
@@ -27,6 +28,7 @@ const Feed = ({ user, authenticated, vinylList }) => {
                 
               </div>
             </div>
+            <div className='status-banner'> * {record.status} *</div>
           </div>
           </div>
         </div>
