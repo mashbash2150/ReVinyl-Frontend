@@ -15,7 +15,8 @@
 - Jeff Carroll
 
 
-### [GitHub - Frontend](https://github.com/mashbash2150/ReVinyl-Frontend) | [GitHub - Backend](https://github.com/mashbash2150/ReVinyl-Backend) | [Trello Board](https://trello.com/b/o27tjY0w/revinyl)  | [Heroku App](TBD)
+### [GitHub - Frontend](https://github.com/mashbash2150/ReVinyl-Frontend) | [GitHub - Backend](https://github.com/mashbash2150/ReVinyl-Backend) | [Trello Board](https://trello.com/b/o27tjY0w/revinyl)  | [Heroku App - Fontend](https://revinyl-frontend.herokuapp.com/) | [Heroku App - Backend](https://dashboard.heroku.com/apps/revinyl-backend) 
+
 
 ---
 
@@ -49,16 +50,25 @@ The app frontend will be built with React, using underlying HTML, CSS, and Javas
 ---
 
 ### **_Screenshots_**
+Home Page: 
+![home](./screenshots/Homepage.png)
+
+Register Page:
+![register](./screenshots/Registerpage.png)
+
+Vinyl Details:
+![vinyldetails](./screenshots/Vinyldetails.png)
+
+Wishlist Page:
+![wishlist](./screenshots/Wishlistpage.png)
+
+About Page:
+![about](./screenshots/Aboutpage.png)
+
+Create Listing:
+![createlisting](./screenshots/CreateListingpage.png)
 
 #### 
-
-####
-
-TBD
-
-#### 
-
-
 
 ---
 
@@ -66,15 +76,19 @@ TBD
 
 ####
 
-- [x] Bug Fix 
-- [ ] Bug Fix 
-- [ ] Future Update 1
-- [ ] Future Update 2
-- [ ] Etc.
+- [ ] Search function
+- [ ] Comment section
+- [ ] Contact seller
+- [ ] Message board
+- [ ] Rating system
 
 ---
 
 ### **_Credits_**
+Record Disc CSS: [Record](https://codepen.io/thebabydino/pen/kNqgKO)
+
+Disc Album Pictures and Album information: [AlbumPictures](https://www.discogs.com/)
+
 
 #### 
 

@@ -4,7 +4,7 @@
 .App {
   text-align: center;
   margin-left: auto;
-  margin-right: auto;
+  margin-right: 5vw;
   margin-bottom: auto;
 }
 
@@ -15,9 +15,10 @@
 }
 
 body {
-  margin: 0 auto;
+  margin: 0, 5vw, 0, 0;
   font-family: 'Rajdhani', sans-serif;
   background-color: #D9CBB5;
+  width: 100vw;
 
 }
 
@@ -59,8 +60,8 @@ form {
   justify-content: center;
   position: relative;
   margin: 19px auto;
-  width: 45vw;
-  height: 45vw;
+  width: 35vw;
+  height: 35vw;
   border-radius: 50%;
   background:
     linear-gradient(30deg, transparent 40%, rgba(42, 41, 40, .85) 40%) no-repeat 100% 0,
@@ -103,8 +104,8 @@ form {
 
 .vinyl-img img {
   object-fit: cover;
-  width: 21vw;
-  height: 21vw;
+  width: 15vw;
+  height: 15vw;
   border-radius: 50%;
   text-align: center;
   cursor: pointer;
@@ -194,6 +195,16 @@ button {
   margin: 0 1vw 0 1vw;
 }
 
+.vinyl-card {
+  opacity: 1.0
+}
+
+.vinyl-card:hover {
+  opacity: 1.0;
+  transform: translateY(-2vh);
+  z-index: 20
+}
+
 .zoom {
   transition: transform .2s;
 }
@@ -203,12 +214,30 @@ button {
 }
 
 .status-banner {
-
-  font-size: 2.25vw;
+  font-family: 'Lobster', cursive;
+  font-size: 3.5vw;
   font-style: italic;
   color:
     #23221A;
-  padding: 1vh;
+
+  text-align: left;
+
+}
+
+.sell-container {
+
+  margin-top: 5vh;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(28vw, 1fr));
+  grid-gap: 0vw;
+}
+
+.trade-container {
+
+  margin-top: 5vh;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(28vw, 1fr));
+  grid-gap: 0vw;
 }
 
 .circle-text {

@@ -104,13 +104,13 @@ const CreateListings = ({ user }) => {
           onChange={handleChange}
           required
         >
-          <option className="option" value="Buy">
+          <option className="option" value="buy">
             Buy
           </option>
-          <option className="option" value="Sell">
+          <option className="option" value="sell">
             Sell
           </option>
-          <option className="option" value="Trade">
+          <option className="option" value="trade">
             Trade
           </option>
         </select>
