@@ -36,15 +36,17 @@ const MyListings = ({ user }) => {
       <Link to={`/listings/create`}>
         <button>Create Listing</button>
       </Link>
-      <div className="container">
+      <div className="list-container">
       {userList?.map((record) => (
-        <div className="vinyl-card">
+        <div className="list-card">
         <div className="vinyl-text" key={record.id}>
-          <p>Title: {record.title}</p>
+          <p><span className="album-title-list">{record.title}</span></p>
+          <div className="list-text">
           <p>Artist: {record.artist}</p>
           <p>Genre: {record.genre}</p>
           <p>Price: ${record.price}</p>
           <p>Looking to: {record.status}</p>
+          </div>
           <div>
             <div className="vinyl-img" key={record.id}>
               <div onClick={() => chooseListing(record)}>

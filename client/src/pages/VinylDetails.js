@@ -33,7 +33,7 @@ const VinylDetails = ({ user, authenticated }) => {
       <div className="details-container"></div>
       <div className="vinyl-details-card" key={vinylDetails.id}>
         <div className="vinyl-text">
-        <h2>Album Title: {vinylDetails.title}</h2>
+        <h2>{vinylDetails.title}</h2>
         <div>Artist: {vinylDetails.artist}</div>
         <div>Genre: {vinylDetails.genre}</div>
         <div>Looking to: {vinylDetails.status}</div>

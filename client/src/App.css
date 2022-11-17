@@ -68,7 +68,7 @@ form {
   text-align: center;
 }
 
-.wish-list-container {
+.list-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -76,13 +76,14 @@ form {
 
 }
 
-.wish-list-card {
+.list-card {
   margin-top: 4vh;
   border: 1px solid black;
   background-color: rgba(101, 101, 99, 0.5);
   width: 30vw;
   padding: 0 0 1.5vh 0;
 }
+
 
 .vinyl-img img {
   object-fit: cover;
@@ -182,18 +183,34 @@ button {
 }
 
 .status-banner {
-  background-color: rgba(24, 59, 24, 0.377);
-  font-size: 1.75vw;
+
+  font-size: 3vh;
   font-style: italic;
   color:
     #23221A;
   padding: 1vh;
 }
 
+.circle-text {
+  font-size: 2.5vh;
+}
+
 .album-title {
-  font-size: 2vh;
+  font-size: 4vh;
   text-shadow: 0 0 2px #9b91289b;
   color: white;
+  font-family: 'Lobster', cursive;
+}
+
+.album-title-list {
+  font-size: 3vh;
+
+  color: black;
+  font-family: 'Lobster', cursive;
+}
+
+.list-text {
+  font-size: 2.5vh;
 }
 
 .album-details {
@@ -225,4 +242,8 @@ button {
 h1,
 h2 {
   font-family: 'Lobster', cursive;
+}
+
+.wish-list {
+  margin-left: auto;
 }

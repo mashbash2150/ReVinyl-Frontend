@@ -26,11 +26,14 @@ export const Library = () => {
   }
 
   return (
-    <div className="wish-list-container">
+    <div>
+    <h1 className="wish-list">Wish List</h1>
+    <div className="list-container">
+     
       {libraryDetails.map((record) => (
-        <div className="wish-list-card" key={record.id}>
+        <div className="list-card" key={record.id}>
           <div className="vinyl-text">
-          <h2>Title: {record.title}</h2>
+          <h2>{record.title}</h2>
           <h3>Artist: {record.artist}</h3>
           <h3>Genre: {record.genre}</h3>
           <h3>Price: ${record.price}</h3>
@@ -44,8 +47,11 @@ export const Library = () => {
             Remove From Wish List
           </button>
         </div>
+         
       ))}
     </div>
+    </div>
+   
   )
 }
 export default Library
