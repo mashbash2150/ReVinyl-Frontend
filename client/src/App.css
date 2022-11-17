@@ -204,7 +204,7 @@ button {
 
 .status-banner {
 
-  font-size: 3vh;
+  font-size: 2.25vw;
   font-style: italic;
   color:
     #23221A;
@@ -212,12 +212,12 @@ button {
 }
 
 .circle-text {
-  font-size: 2.5vh;
+  font-size: 1.5vw;
   color: white;
 }
 
 .album-title {
-  font-size: 4vh;
+  font-size: 2.5vw;
   text-shadow: 0 0 2px #9b91289b;
   color: white;
   font-family: 'Lobster', cursive;
