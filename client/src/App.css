@@ -43,16 +43,32 @@ form {
 
 
 
+.large-circle-OG {
+
+  background-color: rgba(47, 47, 45, 0.647);
+  width: 45vw;
+  height: 45vw;
+  border-radius: 50%;
+  border: 2px solid black;
+}
+
 .large-circle {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: rgba(47, 47, 45, 0.647);
+  position: relative;
+  margin: 19px auto;
   width: 45vw;
   height: 45vw;
   border-radius: 50%;
+  background:
+    linear-gradient(30deg, transparent 40%, rgba(42, 41, 40, .85) 40%) no-repeat 100% 0,
+    linear-gradient(60deg, rgba(42, 41, 40, .85) 60%, transparent 60%) no-repeat 0 100%,
+    repeating-radial-gradient(#2a2928, #2a2928 4px, #ada9a0 5px, #2a2928 6px);
+  background-size: 50% 100%, 100% 50%, 100% 100%;
 }
+
 
 .container {
   margin-top: 5vh;
@@ -97,7 +113,11 @@ form {
   padding: 2vh 0;
 
 
+
+
 }
+
+
 
 .header {
   display: grid;
@@ -193,6 +213,7 @@ button {
 
 .circle-text {
   font-size: 2.5vh;
+  color: white;
 }
 
 .album-title {
