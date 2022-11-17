@@ -50,23 +50,23 @@ The app frontend will be built with React, using underlying HTML, CSS, and Javas
 ---
 
 ### **_Screenshots_**
-Home Page: 
-![home](./screenshots/Homepage.png)
 
-Register Page:
-![register](./screenshots/Registerpage.png)
+![Home](https://i.imgur.com/pS727PQ.png)
 
-Vinyl Details:
-![vinyldetails](./screenshots/Vinyldetails.png)
 
-Wishlist Page:
-![wishlist](./screenshots/Wishlistpage.png)
+![Register](https://i.imgur.com/pS727PQ.png)
 
-About Page:
-![about](./screenshots/Aboutpage.png)
 
-Create Listing:
-![createlisting](./screenshots/CreateListingpage.png)
+![Vinyl Details](https://i.imgur.com/U1jnN1i.png)
+
+
+![wishlist](https://i.imgur.com/Cq2cabf.png)
+
+
+![about](https://i.imgur.com/lJMQ6QJ.png)
+
+
+![createlisting](https://i.imgur.com/jqsjrbb.png)
 
 #### 
 

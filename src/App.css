@@ -90,6 +90,7 @@ form {
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-content: space-between;
+  margin: 0 0 0 4vw;
 
 }
 
@@ -97,7 +98,7 @@ form {
   margin-top: 4vh;
   border: 1px solid black;
   background-color: rgba(101, 101, 99, 0.5);
-  width: 30vw;
+  width: 28vw;
   padding: 0 0 1.5vh 0;
 }
 
@@ -192,7 +193,7 @@ button {
 
 .card-button {
   font-size: 1vw;
-  margin: 0 1vw 0 1vw;
+  margin: 3vw 1vw 0 1vw;
 }
 
 .vinyl-card {
@@ -205,6 +206,7 @@ button {
   z-index: 20
 }
 
+
 .zoom {
   transition: transform .2s;
 }
@@ -215,13 +217,19 @@ button {
 
 .status-banner {
   font-family: 'Lobster', cursive;
-  font-size: 3.5vw;
+  font-size: 4.0vw;
   font-style: italic;
-  color:
-    #23221A;
-
   text-align: left;
+  padding: 5vh 0 0 3vw;
+}
 
+.wanted-status-banner {
+  font-family: 'Lobster', cursive;
+  font-size: 4.0vw;
+  font-style: italic;
+  text-align: left;
+  margin-top: 10vh;
+  padding: 5vh 0 0 3vw;
 }
 
 .sell-container {
@@ -253,14 +261,17 @@ button {
 }
 
 .album-title-list {
-  font-size: 3vh;
-
+  font-size: 2.5vw;
   color: black;
   font-family: 'Lobster', cursive;
+  padding: 1vw 0 1vw 0;
+
 }
 
 .list-text {
-  font-size: 2.5vh;
+  font-size: 1.75vw;
+
+
 }
 
 .album-details {
@@ -296,4 +307,91 @@ h2 {
 
 .wish-list {
   margin-left: auto;
+}
+
+.carousel-container {
+  display: grid;
+  grid-template-columns: 31vw 31vw 31vw;
+  grid-template-rows: 40vh 40vh;
+  grid-gap: 7vh;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  text-align: left;
+  font-style: italic;
+}
+
+
+.article-one img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  grid-column: 1/2;
+  grid-row: 1/3;
+}
+
+.article-one {
+
+  grid-column: 1/2;
+  grid-row: 1/3;
+}
+
+.article-two img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  grid-column: 2/4;
+  grid-row: 1/2;
+}
+
+.article-two {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  grid-column: 2/4;
+  grid-row: 1/2;
+}
+
+.article-three img {
+  display: flex;
+  flex-direction: column;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+
+.article-three {
+  width: 100%;
+  height: 100%;
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+
+.article-four img {
+  display: flex;
+  flex-direction: column;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  grid-column: 3/4;
+  grid-row: 2/3;
+
+}
+
+.article-four {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  grid-column: 3/4;
+  grid-row: 2/3;
+}
+
+h3 {
+
+  padding: 5vw 0 0 0;
 }

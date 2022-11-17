@@ -33,10 +33,12 @@ export const Library = () => {
       {libraryDetails.map((record) => (
         <div className="list-card" key={record.id}>
           <div className="vinyl-text">
-          <h2>{record.title}</h2>
-          <h3>Artist: {record.artist}</h3>
-          <h3>Genre: {record.genre}</h3>
-          <h3>Price: ${record.price}</h3>
+          <div className="album-title-list">{record.title}</div>
+          <div className="list-text">
+          <div>Artist: {record.artist}</div>
+          <div>Genre: {record.genre}</div>
+          <div>Price: ${record.price}</div>
+          </div>
           </div>
           <div>
             <div className="vinyl-img" key={record.id}>

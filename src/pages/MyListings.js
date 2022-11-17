@@ -32,7 +32,7 @@ const MyListings = ({ user }) => {
   }, [user])
  
   return (
-    <div className="grid col-4">
+    <div>
       <Link to={`/listings/create`}>
         <button>Create Listing</button>
       </Link>
@@ -40,12 +40,12 @@ const MyListings = ({ user }) => {
       {userList?.map((record) => (
         <div className="list-card">
         <div className="vinyl-text" key={record.id}>
-          <p><span className="album-title-list">{record.title}</span></p>
+          <div><span className="album-title-list">{record.title}</span></div>
           <div className="list-text">
-          <p>Artist: {record.artist}</p>
-          <p>Genre: {record.genre}</p>
-          <p>Price: ${record.price}</p>
-          <p>Looking to: {record.status}</p>
+          <div>Artist: {record.artist}</div>
+          <div>Genre: {record.genre}</div>
+          <div>Price: ${record.price}</div>
+          <div>Looking to: {record.status}</div>
           </div>
           <div>
             <div className="vinyl-img" key={record.id}>

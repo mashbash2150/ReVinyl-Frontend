@@ -2,6 +2,7 @@ import { useState,useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import { BASE_URL } from '../globals'
+import Articles from '../components/Articles'
 
 
 const Feed = ({ user, authenticated, vinylList }) => {
@@ -41,7 +42,7 @@ const Feed = ({ user, authenticated, vinylList }) => {
 
   return (
 <div>
-  <div className="status-banner">For Sale</div>
+  <div className="status-banner">Available For Purchase   </div>
 <div className="sell-container">
 {sellList.map((record)=> (
     <div className="vinyl-card" key={record.id}>
@@ -63,7 +64,7 @@ const Feed = ({ user, authenticated, vinylList }) => {
 ))}
 </div>
 
-<div className="status-banner">For Trade</div>
+<div className="status-banner">Browse Trades</div>
 <div className="trade-container">
 {tradeList.map((record)=> (
     <div className="vinyl-card" key={record.id}>
@@ -84,8 +85,10 @@ const Feed = ({ user, authenticated, vinylList }) => {
     </div>
 ))}
 </div>
-
-<div className="status-banner">Wanted</div>
+<div className='carousel-div'>
+  <Articles />
+</div>
+<div className="wanted-status-banner">Wanted</div>
 <div className="trade-container">
 {wantedList.map((record)=> (
     <div className="vinyl-card" key={record.id}>
