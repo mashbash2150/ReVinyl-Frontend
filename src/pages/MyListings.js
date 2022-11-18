@@ -5,14 +5,12 @@ import { BASE_URL } from '../globals'
 import { useNavigate } from 'react-router-dom'
 
 const MyListings = ({ user }) => {
-  console.log(user)
   let navigate = useNavigate()
   const [userList, setUserList] = useState(null)
   const [selectedListing, setSelectedListing] = useState([])
 
   const getUserListings = async () => {
     const res = await axios.get(`${BASE_URL}/feed/listings/${user.id}`)
-    console.log('userlisting', res.data)
     setUserList(res.data)
   }
 
@@ -30,7 +28,7 @@ const MyListings = ({ user }) => {
   useEffect(() => {
     getUserListings()
   }, [user])
- 
+
   return (
     <div>
       <Link to={`/listings/create`}>
@@ -38,8 +36,8 @@ const MyListings = ({ user }) => {
       </Link>
       <div className="list-container">
       {userList?.map((record) => (
-        <div className="list-card">
-        <div className="vinyl-text" key={record.id}>
+        <div className="list-card" key={record.id}>
+        <div className="vinyl-text">
           <div><span className="album-title-list">{record.title}</span></div>
           <div className="list-text">
           <div>Artist: {record.artist}</div>

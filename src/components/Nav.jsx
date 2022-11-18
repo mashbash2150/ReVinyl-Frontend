@@ -30,14 +30,11 @@ const NavBar = ({ authenticated, user, handleLogOut }) => {
                 <div className="header-text">ReVinyl</div>
                 <h1 className='username-display'>Welcome{user && ` ${user.email}`}!</h1>
                 <nav className="nav-container">
-
-
                     <div>
                         {authenticated && user ? userOptions : globalOptions}
                     </div>
                 </nav>
             </div>
-
         </div>
     );
 };

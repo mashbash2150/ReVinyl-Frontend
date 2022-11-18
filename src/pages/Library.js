@@ -11,7 +11,6 @@ export const Library = () => {
 
   const GetLibraryDetails = async () => {
     const res = await axios.get(`${BASE_URL}/library/${user_id}`)
-    console.log('LibraryDetails:', res.data.cart)
     setLibraryDetails(res.data.cart)
   }
 
@@ -29,7 +28,6 @@ export const Library = () => {
     <div>
     <h1 className="wish-list">Wish List</h1>
     <div className="list-container">
-     
       {libraryDetails.map((record) => (
         <div className="list-card" key={record.id}>
           <div className="vinyl-text">
@@ -49,11 +47,9 @@ export const Library = () => {
             Remove From Wish List
           </button>
         </div>
-         
       ))}
     </div>
     </div>
-   
   )
 }
 export default Library

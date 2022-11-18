@@ -27,8 +27,9 @@ Digital formats and streaming are great and convenient, but the pleasure of an a
 
 Authenticated ReVinyl users can log in to: 
 - View a feed of posts from ReVinyl users looking to buy, sell, or trade records 
-- Participate in commentary and discussion with other audiophiles
+- Post, update, and delete vinyls that users wish to sell, trade, or buy 
 - View and manage their own musical libraries
+- Read helpful articles for how to best care for vinyls
 
 
 
@@ -81,13 +82,25 @@ The app frontend will be built with React, using underlying HTML, CSS, and Javas
 - [ ] Contact seller
 - [ ] Message board
 - [ ] Rating system
+- [ ] Cart system for purchasing records
 
 ---
 
 ### **_Credits_**
-Record Disc CSS: [Record](https://codepen.io/thebabydino/pen/kNqgKO)
+Record Disc CSS: [CodePen](https://codepen.io/thebabydino/pen/kNqgKO)
 
-Disc Album Pictures and Album information: [AlbumPictures](https://www.discogs.com/)
+Disc Album Pictures and Album information: [Discogs.com](https://www.discogs.com/)
+
+"Can I Clean Vinyl Records with Soap and Water?": [Article by David Woods](https://www.vinylrecordday.org/blog/clean-vinyl-records-with-soap-and-water/)
+
+"How Does A Record Player Work?": [Article by David Woods](https://www.vinylrecordday.org/blog/how-does-a-record-player-work/)
+
+"A Guide To Changing Songs on A Record Player": [Article by David Woods](https://www.vinylrecordday.org/blog/how-to-skip-songs-on-turntable/)
+
+"The Most Selling Vinyl Records": [Article by David Woods](https://www.vinylrecordday.org/blog/top-selling-vinyl-records/)
+
+CSS style used on records in the main feed: [W3Schools](https://www.w3schools.com/cssref/css3_pr_transform.php)
+
 
 
 #### 

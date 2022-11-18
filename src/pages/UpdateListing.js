@@ -12,7 +12,6 @@ const UpdateListing = ({ user }) => {
 
   const UpdateVinylDetails = async () => {
     const res = await axios.get(`${BASE_URL}/feed/${vinyl_id}`)
-    console.log('VinylDetails:', res)
     setVinylDetails(res.data)
     setFormState({
       title: res.data.title,

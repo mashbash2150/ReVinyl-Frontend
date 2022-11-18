@@ -19,17 +19,14 @@ const Feed = ({ user, authenticated, vinylList }) => {
 
   const GetSelling= async (selected)=>{
     const res = await axios.get(`${BASE_URL}/feed/status/sell`)
-    console.log(res.data)
     setSellList(res.data)
   }
   const GetTrading= async (selected)=>{
     const res = await axios.get(`${BASE_URL}/feed/status/trade`)
-    console.log(res.data)
     setTradeList(res.data)
   }
   const GetWanted= async (selected)=>{
     const res = await axios.get(`${BASE_URL}/feed/status/wanted`)
-    console.log(res.data)
     setWantedList(res.data)
   }
 
@@ -55,7 +52,6 @@ const Feed = ({ user, authenticated, vinylList }) => {
           <div onClick={() => chooseVinyl(record)}>
             <img src={record.image} alt="vinyl" />
           </div>
-
         <div className="circle-text">Genre: {record.genre}</div>
       <div className="circle-text">Price: ${record.price}</div>
       </div>
@@ -77,7 +73,6 @@ const Feed = ({ user, authenticated, vinylList }) => {
           <div onClick={() => chooseVinyl(record)}>
             <img src={record.image} alt="vinyl" />
           </div>
-
         <div className="circle-text">Genre: {record.genre}</div>
       <div className="circle-text">Price: ${record.price}</div>
       </div>
@@ -101,7 +96,6 @@ const Feed = ({ user, authenticated, vinylList }) => {
           <div onClick={() => chooseVinyl(record)}>
             <img src={record.image} alt="vinyl" />
           </div>
-
         <div className="circle-text">Genre: {record.genre}</div>
       <div className="circle-text">Price: ${record.price}</div>
       </div>
@@ -109,41 +103,6 @@ const Feed = ({ user, authenticated, vinylList }) => {
     </div>
 ))}
 </div>
-
-
-
-
-
-
-
-
-
-
-
-    {/* <div className="container">
-      {vinylList.map((record) => (
-        <div className="vinyl-card">
-        <div className="vinyl-text card" key={record.id}>
-    
-    
-          </div>
-          <div className="large-circle">
-          <div className="album-title"><strong>{record.title}</strong></div>
-          <div className="circle-text">Artist: {record.artist}</div>
-            <div className="vinyl-img" key={record.id}>
-              <div onClick={() => chooseVinyl(record)}>
-                <img src={record.image} alt="vinyl" />
-              </div>
-  
-            <div className="circle-text">Genre: {record.genre}</div>
-          <div className="circle-text">Price: ${record.price}</div>
-          </div>
-          </div>
-          <div className='status-banner'>  Looking To {record.status} </div>
-        </div>
-        
-      ))}
-    </div> */}
     </div>
   )
 }

@@ -45,7 +45,6 @@ const Register = () => {
               value={formValues.name}
               required
             />
-     
             <label  className="label" htmlFor="email">Email</label>
             <input
             className="input"

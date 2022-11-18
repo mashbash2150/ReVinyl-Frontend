@@ -1,5 +1,4 @@
 import Client from './api'
-// import { BASE_URL } from '../globals'
 
 export const RegisterUser = async (data) => {
   try {

@@ -6,21 +6,16 @@ import { useNavigate } from 'react-router-dom'
 
 const VinylDetails = ({ user, authenticated }) => {
   let navigate = useNavigate()
-
-  console.log('user', user)
-
   const [vinylDetails, setVinylDetails] = useState([])
   let { vinyl_id } = useParams()
 
   const GetVinylDetails = async () => {
     const res = await axios.get(`${BASE_URL}/feed/${vinyl_id}`)
-    console.log('VinylDetails:', res.data)
     setVinylDetails(res.data)
   }
 
   const AddToCart = async () => {
     const res = await axios.post(`${BASE_URL}/library/${user.id}/${vinyl_id}`)
-    console.log('addtocart', res)
     navigate(`/library/${user.id}`)
   }
 

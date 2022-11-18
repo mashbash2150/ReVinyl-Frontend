@@ -22,7 +22,6 @@ const App = () => {
 
   const getFeed = async () => {
     const res = await axios.get(`${BASE_URL}/feed`)
-    console.log(res.data)
     setVinylList(res.data)
   }
 
