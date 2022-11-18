@@ -26,7 +26,7 @@ export const Library = () => {
 
   return (
     <div>
-    <h1 className="wish-list">Wish List</h1>
+    <div className="status-banner">Wish List</div>
     <div className="list-container">
       {libraryDetails.map((record) => (
         <div className="list-card" key={record.id}>
